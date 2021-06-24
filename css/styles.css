@@ -1,0 +1,149 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(63,40,0,0.1);
+}
+
+/* .toppage {
+  background-color: #f5f5f5;
+} */
+
+.top {
+  
+  padding: 60px;
+}
+
+
+.font {
+  font-family:'The Redlight Free';
+  color: #3e2e28;
+  font-size: 80px;
+  text-align: center;
+}
+.form {
+  text-align: center;
+}
+
+
+.artist  {
+  font-family:'The Redlight Free';
+  color: #3e2e28;
+  margin: 80px;
+  /* padding: 0.5em 1em;
+  margin: 2em 0;
+  background: -webkit-repeating-linear-gradient(-45deg, #d3d3d3, #d3d3d3 3px,#dcdcdc 3px, #dcdcdc 7px);
+  background: repeating-linear-gradient(-45deg, #d3d3d3, #d3d3d3 3px,#dcdcdc 3px, #dcdcdc 7px); */
+  padding: 0.2em 0.5em;
+  margin: 2em 1em;
+  background: rgb(102,64,0,0.1);
+  box-shadow: 0px 0px 0px 10px rgb(102,64,0,0.1);
+  border: dashed 2px rgb(102,64,0,0.8);
+  border-radius: 8px;
+}
+
+.artist a{
+  padding: 0 10px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(49, 170, 226) 50%);
+  background-position: 0 0;
+  background-size: 200% auto;
+  transition: .3s;
+  text-decoration: none;
+  color: #666;
+  font-size: 40px;
+  font-family: ’Noto Font’;
+}
+
+a:hover{
+  background-position: -100% 0;
+  color: #fff;
+}
+
+.list1 {
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list1 > *{
+  min-width: 8%;
+  /* background: #fff; */
+  font-size: 50px;
+  text-align: center;
+}
+.list2 {
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list2 > *{
+  min-width: 8%;
+  /* background: #fff; */
+  font-size: 50px;
+  text-align: center;
+}
+
+.list3 {
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list3 > *{
+  min-width: 8%;
+  /* background: #fff; */
+  font-size: 50px;
+  text-align: center;
+}
+
+
+
+.wrap {
+  text-align: center;
+  margin: 60px;
+  padding: 30px;
+  border: 2mm solid rgb(102,64,0,0.5) ;
+  /* background-image: url(https://pbs.twimg.com/media/Evsf0JLU8AMyvNG?format=jpg&name=4096x4096); */
+}
+
+#korean {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+  margin:0 0 40px 0;
+}
+
+span {
+  transition: all 300ms 0s ease;
+}
+
+.add-blue {
+  font-size: 0.5em;
+  color: black;
+}
+
+#count {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+#start_button {
+  color:#3e2e28;
+  font-family: 'Kaushan Script', cursive;
+}
