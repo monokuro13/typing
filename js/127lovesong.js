@@ -1,13 +1,5 @@
 var p = document.getElementById('text');
 var textLists = [
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
-  "dladjfalndsfsadfsd",
   "ㄴㅓㄹㅡㄹ ㅎㅑㅇㅎㅐ ㄱㅣㅇㅜㄴ ㅇㅜㅅㅏㄴㅇㅣ",
   "ㅇㅣㄹㅓㅎㄱㅔ ㄸㅐㅁㅏㅊㅣㅁ",
   "ㅊㅏㅁ ㅈㅏㄱㅇㅏㅅㅓ ㄷㅏㅎㅐㅇㅇㅣㅇㅑ",
