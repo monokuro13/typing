@@ -184,6 +184,7 @@ function gameStart(){
 }
 
 var k = 0;
+var n = 0;
 function createText(){
 p.textContent='';
 checkTexts = textLists[k].split('').map(function(value) {
@@ -196,7 +197,6 @@ checkTexts = textLists[k].split('').map(function(value) {
 // text.textContent = textLists[k];
 korean.textContent = koreanTexts[k];
 charInsort();
-k++;
 }
 
 function charInsort(){
@@ -225,6 +225,7 @@ function KeyEvent(evt){
   console.log(keyStr);
   // console.log(checkTexts[0].textContent);
   console.log(checkTexts[0].textContent);
+  console.log(textLists[k]);
 
   if(keyStr === checkTexts[0].textContent) {
     checkTexts[0].className = 'add-blue';
@@ -241,10 +242,16 @@ function KeyEvent(evt){
     mistake++;
   }
   
-if(char_num == textLists[k].length){
-    char_num=0;
-    createText();
-    }
+  if(char_num == textLists[k].length){
+      char_num=0;
+      k++;
+      n++;
+      if (n == textLists.length) {
+        finish();
+      }else {
+        createText();
+      }
+  }
 }
 
 document.onkeypress = KeyEvent;

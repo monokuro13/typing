@@ -123,6 +123,7 @@ function gameStart(){
 }
 
 var k = 0;
+var n = 0;
 function createText(){
 p.textContent='';
 checkTexts = textLists[k].split('').map(function(value) {
@@ -135,7 +136,6 @@ checkTexts = textLists[k].split('').map(function(value) {
 // text.textContent = textLists[k];
 korean.textContent = koreanTexts[k];
 charInsort();
-k++;
 }
 
 function charInsort(){
@@ -198,81 +198,18 @@ function KeyEvent(evt){
       // mistake++;
       // document.getElementById('missaudio').play();
     // }
-if(char_num == textLists[k].length){
-    char_num=0;
-    createText();
-    }
+    if(char_num == textLists[k].length){
+      char_num=0;
+      k++;
+      n++;
+      if (n == textLists.length) {
+        finish();
+      }else {
+        createText();
+      }
+  }
 }
 
 document.onkeypress = KeyEvent;
 self.focus();
 
-// document.onkeydown = function(e) {
-//   var key_num = evt.charCode;
-//   var keystr = String.fromCharCode(key_num);
-//   if(keystr === checkTexts[0].textContent) {
-//     checkTexts[0].className = 'add-blue';
-
-//     checkTexts.shift();
-
-//     if(!checkTexts.length) createText();
-//   }
-
-//   if(keystr == word_char){
-//       document.getElementById('missaudio').pause();
-//       document.getElementById('missaudio').currentTime = 0;
-//       document.getElementById('correctaudio').pause();
-//                   document.getElementById('correctaudio').currentTime = 0;
-//       document.getElementById('correctaudio').play();
-//       text.innerHTML="<span style='color: red;'>"+textLists[k].substr(0,char_num+1)+"</span>"+textLists[k].substr(char_num+1,textLists[k].length);
-//       char_num++;
-//       correct++;
-//       charInsort();
-//       }else{
-//                     document.getElementById('missaudio').pause();
-//           document.getElementById('missaudio').currentTime = 0;
-//           document.getElementById('correctaudio').pause();
-//           document.getElementById('correctaudio').currentTime = 0;
-//           mistake++;
-//           document.getElementById('missaudio').play();
-//       }
-//   if(char_num == textLists[k].length){
-//       char_num=0;
-//       createText();
-//       }
-// };
-
-
-// document.onkeydown = function(e) {
-//     if(e.keyCode == 189){
-//        keyStr = "-";
-//        }else if(e.keyCode == 188){
-//                 keyStr = ","
-//                 }else{
-//  var keyStr = String.fromCharCode(e.keyCode);
-//     keyStr = keyStr.toLowerCase();
-//        }
-//     if(keyStr == word_char){
-//         document.getElementById('missaudio').pause();
-//         document.getElementById('missaudio').currentTime = 0;
-//         document.getElementById('correctaudio').pause();
-//                    document.getElementById('correctaudio').currentTime = 0;
-//         document.getElementById('correctaudio').play();
-//         text.innerHTML="<span style='color: red;'>"+textLists[k].substr(0,char_num+1)+"</span>"+textLists[k].substr(char_num+1,textLists[k].length);
-//         char_num++;
-//         correct++;
-//         charInsort();
-//        }else{
-//                       document.getElementById('missaudio').pause();
-//            document.getElementById('missaudio').currentTime = 0;
-//            document.getElementById('correctaudio').pause();
-//            document.getElementById('correctaudio').currentTime = 0;
-//            mistake++;
-//            document.getElementById('missaudio').play();
-//        }
-//     if(char_num == textLists[k].length){
-//         char_num=0;
-//         createText();
-//        }
-// };
- 
