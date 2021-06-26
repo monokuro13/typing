@@ -1,0 +1,268 @@
+var p = document.getElementById('text');
+var textLists = [   
+  "All I wanna be is ㅁㅓㅅㅈㅣㅁ",
+  "ㄴㅐ ㅁㅏㅇㅡㅁㄷㅐㄹㅗ ㄱㅗㄹㄹㅏ kick it",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ ㄷㅏ HIP ㅎㅐ",
+  "Do it do it like me do it",
+  "ㄴㅏㄹㅡㄹ ㄸㅏㄹㅏ ㅎㅐ kick it",
+  "Clapping clapping ㅁㅗㄷㅜ ㄱㅏㅌㅇㅣ HIP",
+  "I love you ㄴㅔㄱㅏ ㅁㅜㅓㄹㅏㄷㅡㄴ ㄱㅏㄴㅇㅔ",
+  "Respect you ㄴㅔㄱㅏ ㅁㅜㅓㄹ ㅎㅏㄷㅡㄴ ㄱㅏㄴㅇㅔ",
+  "ㄴㅡㄹ ㄸㅏㄲㅡㄴㄸㅏㄲㅡㄴㅎㅐ ㄱㅡ ㄱㅗㅏㄴㅅㅣㅁㅇㅣ ㄸㅏㄲㅡㅁㄸㅏㄲㅡㅁㅎㅐ",
+  "ㄸㅗ ㅎㅣㄹㄲㅡㅁ ㅎㅣㄹㄲㅡㅁ ㅎㅣㄹㄲㅡㅁ",
+  "ㅇㅣㅈㅔㄴ ㅁㅗㄷㅡㄴ ㅇㅣㄹㅇㅣ ㄱㅏㅃㅜㄴㅎㅐ veteran",
+  "ㅅㅓㅇㄱㅗㅇㅇㅡㄹ ㅆㅓㄹㅇㅓ ㅁㅓㄱㅇㅓ ㅁㅏㅊㅣ michelin",
+  "ㄴㅜㄱㅜㅂㅗㄷㅏ ㅃㅏㄹㅡㄴ ㄱㅓㄹㅇㅡㅁㅇㅡㄹ ㄱㅓㄹㅇㅓㅆㄴㅔ ㅂㅣㅅㅣㅈㅡㄴ",
+  "ㅇㅣㅈㅇㅡㄴ ㅈㅣㄷㅗ ㅇㅗㄹㅐㅇㅑ ㄷㅜㅣㅅㄱㅓㄹㅇㅡㅁ",
+  "All I wanna be is ㅁㅓㅅㅈㅣㅁ",
+  "ㄴㅐ ㅁㅏㅇㅡㅁㄷㅐㄹㅗ ㄱㅗㄹㄹㅏ kick it",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ ㄷㅏ HIP ㅎㅐ",
+  "ㅃㅣㅃㅣㅃㅣ ㄴㅗㄴㄹㅏㄴㅇㅣ ㄷㅗㅐ fashion",
+  "ㅂㅕㄹㄹㅗ ㅅㅣㄴㄱㅕㅇ ㅇㅏㄴ ㅆㅓ ㄱㅡㅈㅓ action",
+  "ㅈㅏㄲㅜ click me click me",
+  "ㅎㅗㄹㄹㅣㄴ ㄷㅡㅅㅇㅣ zoom",
+  "Close up close up close up",
+  "HIP ㅎㅐ HIP HIP",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
+  "HIP HIP HIP HIP HIP HIP ㅎㅐ HIP HIP",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
+  "HIP HIP HIP HIP ㅎㅐ HIP",
+  "(Attention) ㅇㅓㄷㅣㄹ ㄱㅏㄷㅡㄴ ㄴㅓㄴ",
+  "(Reflection) ㅂㅣㅊㄴㅏㄹ ㅅㅜ ㅇㅣㅆㅇㅓ",
+  "ㅅㅔㅅㅏㅇㅇㅔ ㄴㅓㄴ ㅎㅏㄴㅏㅃㅜㄴㅇㅣㄴ ㄱㅓㄹ",
+  "ㄱㅡㄴㄷㅔ ㅇㅗㅐㅇㅣㄹㅐ ㄴㅔ ㅇㅓㄹㄱㅜㄹㅇㅔ ㅊㅣㅁ ㅂㅐㅌㄴㅣ (ㅋㅏㄱㅌㅜ)",
+  "ㄴㅏㄹ ㅈㅏㄱㅡㄱㅎㅏㄴ ㅇㅕㄹㅓㅂㅜㄴ ㄱㅏㅁㅅㅏ",
+  "ㄱㅓㄱㅣㅅㅓ ㅁㅓㅁㅊㅜㄴ ㅉㅣㅈㅣㄹㅇㅣ ㅂㅏㄴㅅㅏ",
+  "ㄷㅓㄱㅂㅜㄴㅇㅔ ㄴㅏㅇㅡㅣ ㅁㅔㄴㅌㅏㄹㅇㅡㄴ ㄷㅏㄴㄷㅏㄴㅎㅐ",
+  "ㄴㅏㄴ ㄷㅏㅇㅡㅁ ㅇㅐㄹㅂㅓㅁ ㅁㅏㄴㄷㅡㄹㄹㅓ ㄱㅏㄹㄱㅔ",
+  "All you wanna be is trendy",
+  "ㅇㅓㄱㅡㄹㅗ ㄲㅡㄹㄱㅣ gimmick ㄸㅐㅉㅣ",
+  "ㄱㅡㄹㅓㄴ ㅇㅐㄷㅡㄹ ㄲㅣㄹㅣㄲㅣㄹㅣ HIP",
+  "ㅃㅣㅃㅣㅃㅣ ㄴㅗㄴㄹㅏㄴㅇㅣ ㄷㅗㅐ fashion",
+  "ㅂㅕㄹㄹㅗ ㅅㅣㄴㄱㅕㅇ ㅇㅏㄴ ㅆㅓ ㄱㅡㅈㅓ action",
+  "ㅈㅏㄲㅜ click me click me",
+  "ㅎㅗㄹㄹㅣㄴ ㄷㅡㅅㅇㅣ zoom",
+  "Close up close up close up",
+  "HIP ㅎㅐ HIP HIP",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
+  "HIP HIP HIP HIP HIP HIP ㅎㅐ HIP HIP",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
+  "HIP HIP HIP HIP ㅎㅐ HIP",
+  "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
+  "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅇㅣㅂ",
+  "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
+  "ㄴㅏㄴ ㅅㅏㅇㄱㅗㅏㄴㅇㅓㅂㅅㅈㅣ",
+  "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
+  "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅇㅣㅂ",
+  "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
+  "ㄴㅐㄱㅏ ㅎㅏㅁㅕㄴ HIP",
+  "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
+  "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅍㅐㄴㅌㅣ",
+  "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
+  "ㄴㅏㄴ ㅅㅏㅇㄱㅗㅏㄴㅇㅓㅂㅅㅈㅣ",
+  "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
+  "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅍㅐㄴㅌㅣ",
+  "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
+  "ㄴㅐㄱㅏ ㅎㅏㅁㅕㄴ HIP",
+  "ㅃㅣㅃㅣㅃㅣ ㄴㅗㄴㄹㅏㄴㅇㅣ ㄷㅗㅐ fashion",
+  "ㅂㅕㄹㄹㅗ ㅅㅣㄴㄱㅕㅇ ㅇㅏㄴ ㅆㅓ ㄱㅡㅈㅓ action",
+  "ㅈㅏㄲㅜ click me click me",
+  "ㅎㅗㄹㄹㅣㄴ ㄷㅡㅅㅇㅣ zoom",
+  "Close up close up close up",
+  "HIP ㅎㅐ HIP HIP",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
+  "HIP HIP HIP HIP HIP HIP ㅎㅐ HIP HIP",
+  "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
+  "HIP HIP HIP HIP ㅎㅐ HIP",
+]
+
+var t = document.getElementById('korean');
+var koreanTexts = [
+  "All I wanna be is 멋짐",
+  "내 마음대로 골라 kick it",
+  "머리 어깨 무릎 다 HIP 해",
+  "Do it do it like me do it",
+  "나를 따라 해 kick it",
+  "Clapping clapping 모두 같이 HIP",
+  "I love you 네가 뭐라든 간에",
+  "Respect you 네가 뭘 하든 간에",
+  "늘 따끈따끈해 그 관심이 따끔따끔해",
+  "또 힐끔 힐끔 힐끔",
+  "이젠 모든 일이 가뿐해 veteran",
+  "성공을 썰어 먹어 마치 michelin",
+  "누구보다 빠른 걸음을 걸었네 비시즌",
+  "잊은 지도 오래야 뒷걸음",
+  "All I wanna be is 멋짐",
+  "내 멋대로 골라 kick it",
+  "머리 어깨 무릎 다 HIP",
+  "삐삐삐 논란이 돼 my fashion",
+  "별로 신경 안 써 그저 action",
+  "자꾸 click me click me",
+  "홀린 듯이 zoom",
+  "Close up close up close up",
+  "HIP 해 HIP HIP",
+  "머리 어깨 무릎 HIP",
+  "HIP HIP HIP HIP HIP HIP 해 HIP HIP",
+  "머리 어깨 무릎 HIP",
+  "HIP HIP HIP HIP 해 HIP",
+  "(Attention) 어딜 가든 넌",
+  "(Reflection) 빛날 수 있어",
+  "세상에 넌 하나뿐인 걸",
+  "근데 왜이래 네 얼굴에 침 뱉니 (칵투)",
+  "날 자극한 여러분 감사",
+  "거기서 멈춘 찌질이 반사",
+  "덕분에 나의 멘탈은 단단해",
+  "난 다음 앨범 만들러 갈게",
+  "All you wanna be is trendy",
+  "어그로 끌기 gimmick 때찌",
+  "그런 애들 끼리끼리 HIP",
+  "삐삐삐 논란이 돼 my fashion",
+  "별로 신경 안 써 그저 action",
+  "자꾸 click me click me",
+  "홀린 듯이 zoom",
+  "Close up close up close up",
+  "HIP 해 HIP HIP",
+  "머리 어깨 무릎 HIP",
+  "HIP HIP HIP HIP HIP HIP 해 HIP HIP",
+  "머리 어깨 무릎 HIP",
+  "HIP HIP HIP HIP 해 HIP",
+  "코 묻은 티",
+  "삐져나온 입",
+  "떡진 머리",
+  "난 상관없지",
+  "코 묻은 티",
+  "삐져나온 입",
+  "떡진 머리",
+  "내가 하면 HIP",
+  "코 묻은 티",
+  "삐져나온 팬티",
+  "떡진 머리",
+  "난 상관없지",
+  "코 묻은 티",
+  "삐져나온 팬티",
+  "떡진 머리",
+  "내가 하면 HIP",
+  "삐삐삐 논란이 돼 my fashion",
+  "별로 신경 안 써 그저 action",
+  "자꾸 click me click me",
+  "홀린 듯이 zoom",
+  "Close up close up close up",
+  "HIP 해 HIP HIP",
+  "머리 어깨 무릎 HIP",
+  "HIP HIP HIP HIP HIP HIP 해 HIP HIP",
+  "머리 어깨 무릎 HIP",
+  "HIP HIP HIP HIP 해 HIP"
+ ]
+
+ var checkTexts = [];
+var time_limit = 600;
+var readytime = 3;
+var score;
+var correct;
+var mistake;
+var char_num = 0;
+var word_char;
+var random;
+
+function ready(){
+  readytime = 3;
+  scoredis.innerHTML="";
+  start_button.style.visibility ="hidden";
+  var readytimer = setInterval(function(){
+    count.innerHTML=readytime;
+    readytime--;
+    if(readytime < 0){
+      clearInterval(readytimer);
+        gameStart();
+      }
+  },1000);
+}
+function gameStart(){
+  score = 0.0;
+  mistake = 0;
+  correct = 0;
+  createText();
+  var time_remaining = time_limit;
+  var gametimer = setInterval(function(){
+    count.innerHTML="残り時間："+time_remaining;
+      time_remaining--;
+      if(time_remaining <= 0){
+      clearInterval(gametimer);
+          finish();
+  }
+  },1000);
+}
+
+var k = 0;
+var n = 0;
+function createText(){
+p.textContent='';
+checkTexts = textLists[k].split('').map(function(value) {
+  var span = document.createElement('span');
+  span.textContent = value;
+  p.appendChild(span);
+
+  return span
+});
+// text.textContent = textLists[k];
+korean.textContent = koreanTexts[k];
+charInsort();
+}
+
+function charInsort(){
+  word_char = textLists[k].charAt(char_num);
+  // console.log(word_char);
+}
+
+
+function finish(){
+    score = Math.floor(Math.pow(correct,2) * Math.pow((correct/(correct+mistake)),5));
+    scoredis.innerHTML="スコア:"+score+"点"+"<hr>正タイプ数:"+correct+"<br>ミスタイプ数:"+mistake+"<br>正答率"+(correct/(correct+mistake)*100).toFixed(1)+"%";
+    count.innerHTML="";
+    text.innerHTML="";
+    korean.innerHTML="";
+    start_button.style.visibility ="visible";
+    word_char=0;
+    random = 0;
+    char_num = 0;
+}
+
+function KeyEvent(evt){ 
+  
+  var key_num = evt.charCode;
+  var keyStr = String.fromCharCode(key_num);
+  
+  console.log(keyStr);
+  // console.log(checkTexts[0].textContent);
+  console.log(checkTexts[0].textContent);
+  console.log(textLists[k]);
+
+  if(keyStr === checkTexts[0].textContent) {
+    checkTexts[0].className = 'add-blue';
+    char_num++;
+    correct++;
+    charInsort();
+
+   
+    checkTexts.shift();
+
+    if(!checkTexts.length) createText();
+
+  }else {
+    mistake++;
+  }
+  
+  if(char_num == textLists[k].length){
+      char_num=0;
+      k++;
+      n++;
+      if (n == textLists.length) {
+        finish();
+      }else {
+        createText();
+      }
+  }
+}
+
+document.onkeypress = KeyEvent;
+self.focus();
