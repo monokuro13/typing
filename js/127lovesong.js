@@ -160,14 +160,19 @@ function ready(){
     readytime--;
     if(readytime < 0){
       clearInterval(readytimer);
-      // clearTimeout(timerId);
-      startTime = 0;
-      elapsedTime = 0;
-      timerId = 0;
-      timeToadd = 0;
       gameStart();
-      }
+    }
   },1000);
+}
+
+function updateTimetText(){
+  var m = Math.floor(elapsedTime / 60000);
+  var s = Math.floor(elapsedTime % 60000 / 1000);
+  var ms = elapsedTime % 1000;
+  m = ('0' + m).slice(-2); 
+  s = ('0' + s).slice(-2);
+  ms = ('0' + ms).slice(-3);
+  count.textContent = m + ':' + s + ':' + ms;
 }
 
 function gameStart(){
@@ -180,47 +185,37 @@ function gameStart(){
   //   count.innerHTML="残り時間："+time_remaining;
   //     time_remaining--;
   //     if(time_remaining <= 0){
-  //     clearInterval(gametimer);
-  //         finish();
-  // }
-  // },1000);
+    //     clearInterval(gametimer);
+    //         finish();
+    // }
+    // },1000);
   var gametimer = setInterval(function(){
     'use strict';
-    // var timer = document.getElementById('count');
     // var start = document.getElementById('start_button');
-    // var startTime;
-    // var elapsedTime = 0;
-    // var timerId;
-    // var timeToadd = 0;
-
+    
     startTime = Date.now();
     countUp();
-  
-    function updateTimetText(){
-        var m = Math.floor(elapsedTime / 60000);
-        var s = Math.floor(elapsedTime % 60000 / 1000);
-        var ms = elapsedTime % 1000;
-        m = ('0' + m).slice(-2); 
-        s = ('0' + s).slice(-2);
-        ms = ('0' + ms).slice(-3);
-        count.textContent = m + ':' + s + ':' + ms;
-    }
-  
+    
+    
+    
     function countUp(){
-        timerId = setTimeout(function(){
-            elapsedTime = Date.now() - startTime + timeToadd;
-            updateTimetText()
-            countUp();
-            if (n == textLists.length) {
-              clearTimeout(timerId);
-              timeToadd += Date.now() - startTime;
-            }
-        },10);
+      timerId = setTimeout(function(){
+        elapsedTime = Date.now() - startTime + timeToadd;
+        updateTimetText()
+        countUp();
+        if (n == textLists.length) {
+          clearTimeout(timerId);
+          timeToadd += Date.now() - startTime;
+        }
+      },10);
     }
     
   }());
 }
 
+
+
+      
 var k = 0;
 var n = 0;
 function createText(){
