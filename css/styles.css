@@ -39,9 +39,12 @@ body {
   background: repeating-linear-gradient(-45deg, #d3d3d3, #d3d3d3 3px,#dcdcdc 3px, #dcdcdc 7px); */
   padding: 0.2em 0.5em;
   margin: 2em 1em;
-  background: rgb(102,64,0,0.1);
+  /* background: rgb(102,64,0,0.1);
   box-shadow: 0px 0px 0px 10px rgb(102,64,0,0.1);
-  border: dashed 2px rgb(102,64,0,0.8);
+  border: dashed 2px rgb(102,64,0,0.8); */
+  background: rgb(255,165,0,0.2);
+  box-shadow: 0px 0px 0px 10px rgb(255,165,0,0.2);
+  border: dashed 2px rgb(255,165,0,0.8);
   border-radius: 8px;
 }
 
@@ -106,25 +109,42 @@ a:hover{
   text-align: center;
 }
 
-
+.typing {
+  /* border-top: 1px solid rgb(255,165,0,0.8); */
+  box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.5);
+  padding-bottom: 10px;
+}
 
 .wrap {
   text-align: center;
   margin: 60px;
   padding: 30px;
-  border: 2mm solid rgb(102,64,0,0.5) ;
-  /* background-image: url(https://pbs.twimg.com/media/Evsf0JLU8AMyvNG?format=jpg&name=4096x4096); */
+  border: 2mm solid rgb(255,165,0,0.8);
+}
+
+.song {
+  text-align: center;
+  padding-top: 30px;
+}
+.info {
+  border-bottom: 1px solid rgb(255,165,0,0.8);
+  font-size: 2em;
+}
+
+.album {
+  font-size: 1.5em;
+  padding-top: 20px;
 }
 
 #korean {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   text-align: center;
   margin-bottom: 0;
 }
 
 #text {
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bold;
   color: #666;
   text-align: center;
@@ -145,6 +165,6 @@ span {
 }
 
 #start_button {
-  color:#3e2e28;
+  color:rgb(255,165,0,0.8);
   font-family: 'Kaushan Script', cursive;
 }
