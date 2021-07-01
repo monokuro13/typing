@@ -33,13 +33,13 @@ var textLists = [
   "ㅇㅣ ㄲㅜㅁㄷㅡㄹㅇㅣ ㅎㅕㄴㅅㅣㄹㅇㅣ ㄷㅗㅣㅁㅕㄴ",
   "ㅎㅏㅁㄲㅔ ㄴㅏㄴㅜㄴ ㅅㅜㄴㄱㅏㄴㄷㅡㄹㅇㅡㄹ ㅇㅣ ㄱㅏㄴㅡㅇㅅㅓㅇㄷㅡㄹㅇㅡㄹ",
   "ㄲㅗㄱ ㄷㅏㅅㅣ ㄱㅣㅇㅓㄱㅎㅐㅈㅜㅓ",
-  "ㄴㅔ ㅇㅏㄴㅇㅔ ㅅㅗㅈㅜㅇㅎㅏㄴ ㅎㅗㄴㅈㅏㅁㅏㄴㅇㅡㅣ ㅈㅏㅇㅅㅗㄱㅏ ㅇㅣㅆㅇㅓ",
+  "ㄴㅔ ㅇㅏㄴㅇㅔ ㅇㅕㄹㄹㅕㅆㄷㅓㄴ ㅁㅜㄴㅌㅡㅁㅇㅡㄹㅗ ㅂㅗㄴ ㅈㅓㄱㅇㅣ ㅇㅣㅆㅇㅓ",
   "ㅇㅏㅈㅣㄱㅇㅡㄴ ㅂㅕㄹㄱㅓ ㅇㅏㄴㅣㄴ ㅍㅜㅇㄱㅕㅇㅇㅣㅈㅣㅁㅏㄴ",
   "ㅈㅗㄱㅡㅁㅁㅏㄴ ㄱㅣㄷㅏㄹㅣㅁㅕㄴ ㄱㅗㄷ ㅁㅏㄴㄴㅏㄱㅔ ㄷㅗㅣㄹ ㄱㅓㄹ",
   "ㄱㅡ ㅇㅏㄴㅇㅔ ㅁㅓㅅㅈㅣㄱㅗ ㄴㅗㄹㄹㅏㅇㅜㄴ ㄱㅓㄹ ㅅㅣㅁㅇㅓㄷㅜㅓㅆㄴㅡㄴㄷㅔ",
   "ㅇㅏㅈㅣㄱㅇㅡㄴ ㅇㅏㅁㅜㄱㅓㅅㄷㅗ ㅇㅏㄴ ㅂㅗㅇㅣㅈㅣㅁㅏㄴ",
   "ㅈㅗㄱㅡㅁㅁㅏㄴ ㄱㅣㄷㅏㄹㅣㅁㅕㄴ ㅇㅏㄹㄱㅔ ㄷㅗㅣㄹ ㄱㅓㅇㅑ",
-  "ㄴㅏㅇㅡㅣ ㅂㅣㅁㅣㄹㅈㅓㅇㅇㅜㅓㄴ",
+  "ㄴㅓㅇㅡㅣ ㅂㅣㅁㅣㄹㅈㅓㅇㅇㅜㅓㄴ",
   "ㅁㅜㄹㅓㄱㅁㅜㄹㅓㄱ ㅇㅓㅅㅓㅇㅓㅅㅓ ㅈㅏㄹㅏㄴㅏ ㅈㅜㅓ Beautiful"
 ];
 
@@ -88,7 +88,6 @@ var t = document.getElementById('korean');
   "무럭무럭 어서어서 자라나 줘 Beautiful"
 ];
 var checkTexts = [];
-var time_limit = 600;
 var readytime = 3;
 var score;
 var correct;
@@ -96,36 +95,67 @@ var mistake;
 var char_num = 0;
 var word_char;
 var random;
+var startTime;
+var elapsedTime = 0;
+var timerId;
+var timeToadd = 0;
+var timer = document.getElementById('count');
+var endpoint = 0;
 
 function ready(){
+  endpoint = 0;
   readytime = 3;
   scoredis.innerHTML="";
+  count.innerHTML = "";
   start_button.style.visibility ="hidden";
   var readytimer = setInterval(function(){
     count.innerHTML=readytime;
     readytime--;
     if(readytime < 0){
       clearInterval(readytimer);
-        gameStart();
-      }
+      gameStart();
+    }
   },1000);
 }
+
+function updateTimetText(){
+  var m = Math.floor(elapsedTime / 60000);
+  var s = Math.floor(elapsedTime % 60000 / 1000);
+  var ms = elapsedTime % 1000;
+  m = ('0' + m).slice(-2); 
+  s = ('0' + s).slice(-2);
+  ms = ('0' + ms).slice(-3);
+  count.textContent = m + ':' + s + ':' + ms;
+}
+
 function gameStart(){
   score = 0.0;
   mistake = 0;
   correct = 0;
   createText();
-  var time_remaining = time_limit;
   var gametimer = setInterval(function(){
-    count.innerHTML="残り時間："+time_remaining;
-      time_remaining--;
-      if(time_remaining <= 0){
-      clearInterval(gametimer);
-          finish();
-  }
-  },1000);
+    'use strict';
+    
+    startTime = Date.now();
+    countUp();
+    
+    function countUp(){
+      timerId = setTimeout(function(){
+        elapsedTime = Date.now() - startTime + timeToadd;
+        updateTimetText()
+        countUp();
+        if (endpoint == 1) {
+          clearTimeout(timerId);
+        }
+      },10);
+    }
+    
+  }());
 }
 
+
+
+      
 var k = 0;
 var n = 0;
 function createText(){
@@ -137,7 +167,6 @@ checkTexts = textLists[k].split('').map(function(value) {
 
   return span
 });
-// text.textContent = textLists[k];
 korean.textContent = koreanTexts[k];
 charInsort();
 }
@@ -158,6 +187,10 @@ function finish(){
     word_char=0;
     random = 0;
     char_num = 0;
+    k = 0;
+    n = 0;
+    endpoint = 1;
+    
 }
 
 function KeyEvent(evt){ 
@@ -183,19 +216,17 @@ function KeyEvent(evt){
   }else {
     mistake++;
   }
-  
-    if(char_num == textLists[k].length){
-      char_num=0;
-      k++;
-      n++;
-      if (n == textLists.length) {
-        finish();
-      }else {
-        createText();
-      }
+
+  if(char_num == textLists[k].length){
+    char_num=0;
+    k++;
+    n++;
+    if (n == textLists.length) {
+      finish();
+    }else {
+      createText();
+    }
   }
 }
-
 document.onkeypress = KeyEvent;
 self.focus();
-

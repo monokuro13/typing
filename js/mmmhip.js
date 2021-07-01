@@ -155,114 +155,145 @@ var koreanTexts = [
  ]
 
  var checkTexts = [];
-var time_limit = 600;
-var readytime = 3;
-var score;
-var correct;
-var mistake;
-var char_num = 0;
-var word_char;
-var random;
-
-function ready(){
-  readytime = 3;
-  scoredis.innerHTML="";
-  start_button.style.visibility ="hidden";
-  var readytimer = setInterval(function(){
-    count.innerHTML=readytime;
-    readytime--;
-    if(readytime < 0){
-      clearInterval(readytimer);
-        gameStart();
-      }
-  },1000);
-}
-function gameStart(){
-  score = 0.0;
-  mistake = 0;
-  correct = 0;
-  createText();
-  var time_remaining = time_limit;
-  var gametimer = setInterval(function(){
-    count.innerHTML="残り時間："+time_remaining;
-      time_remaining--;
-      if(time_remaining <= 0){
-      clearInterval(gametimer);
-          finish();
-  }
-  },1000);
-}
-
-var k = 0;
-var n = 0;
-function createText(){
-p.textContent='';
-checkTexts = textLists[k].split('').map(function(value) {
-  var span = document.createElement('span');
-  span.textContent = value;
-  p.appendChild(span);
-
-  return span
-});
-// text.textContent = textLists[k];
-korean.textContent = koreanTexts[k];
-charInsort();
-}
-
-function charInsort(){
-  word_char = textLists[k].charAt(char_num);
-  // console.log(word_char);
-}
-
-
-function finish(){
-    score = Math.floor(Math.pow(correct,2) * Math.pow((correct/(correct+mistake)),5));
-    scoredis.innerHTML="スコア:"+score+"点"+"<hr>正タイプ数:"+correct+"<br>ミスタイプ数:"+mistake+"<br>正答率"+(correct/(correct+mistake)*100).toFixed(1)+"%";
-    count.innerHTML="";
-    text.innerHTML="";
-    korean.innerHTML="";
-    start_button.style.visibility ="visible";
-    word_char=0;
-    random = 0;
-    char_num = 0;
-}
-
-function KeyEvent(evt){ 
-  
-  var key_num = evt.charCode;
-  var keyStr = String.fromCharCode(key_num);
-  
-  console.log(keyStr);
-  // console.log(checkTexts[0].textContent);
-  console.log(checkTexts[0].textContent);
-  console.log(textLists[k]);
-
-  if(keyStr === checkTexts[0].textContent) {
-    checkTexts[0].className = 'add-blue';
-    char_num++;
-    correct++;
-    charInsort();
-
+ var readytime = 3;
+ var score;
+ var correct;
+ var mistake;
+ var char_num = 0;
+ var word_char;
+ var random;
+ var startTime;
+ var elapsedTime = 0;
+ var timerId;
+ var timeToadd = 0;
+ var timer = document.getElementById('count');
+ var endpoint = 0;
+ 
+ function ready(){
+   endpoint = 0;
+   readytime = 3;
+   scoredis.innerHTML="";
+   count.innerHTML = "";
+   start_button.style.visibility ="hidden";
+   var readytimer = setInterval(function(){
+     count.innerHTML=readytime;
+     readytime--;
+     if(readytime < 0){
+       clearInterval(readytimer);
+       gameStart();
+     }
+   },1000);
+ }
+ 
+ function updateTimetText(){
+   var m = Math.floor(elapsedTime / 60000);
+   var s = Math.floor(elapsedTime % 60000 / 1000);
+   var ms = elapsedTime % 1000;
+   m = ('0' + m).slice(-2); 
+   s = ('0' + s).slice(-2);
+   ms = ('0' + ms).slice(-3);
+   count.textContent = m + ':' + s + ':' + ms;
+ }
+ 
+ function gameStart(){
+   score = 0.0;
+   mistake = 0;
+   correct = 0;
+   createText();
+   var gametimer = setInterval(function(){
+     'use strict';
+     
+     startTime = Date.now();
+     countUp();
+     
+     function countUp(){
+       timerId = setTimeout(function(){
+         elapsedTime = Date.now() - startTime + timeToadd;
+         updateTimetText()
+         countUp();
+         if (endpoint == 1) {
+           clearTimeout(timerId);
+         }
+       },10);
+     }
+     
+   }());
+ }
+ 
+ 
+ 
+       
+ var k = 0;
+ var n = 0;
+ function createText(){
+ p.textContent='';
+ checkTexts = textLists[k].split('').map(function(value) {
+   var span = document.createElement('span');
+   span.textContent = value;
+   p.appendChild(span);
+ 
+   return span
+ });
+ korean.textContent = koreanTexts[k];
+ charInsort();
+ }
+ 
+ function charInsort(){
+   word_char = textLists[k].charAt(char_num);
+   // console.log(word_char);
+ }
+ 
+ 
+ function finish(){
+     score = Math.floor(Math.pow(correct,2) * Math.pow((correct/(correct+mistake)),5));
+     scoredis.innerHTML="スコア:"+score+"点"+"<hr>正タイプ数:"+correct+"<br>ミスタイプ数:"+mistake+"<br>正答率"+(correct/(correct+mistake)*100).toFixed(1)+"%";
+     count.innerHTML="";
+     text.innerHTML="";
+     korean.innerHTML="";
+     start_button.style.visibility ="visible";
+     word_char=0;
+     random = 0;
+     char_num = 0;
+     k = 0;
+     n = 0;
+     endpoint = 1;
+     
+ }
+ 
+ function KeyEvent(evt){ 
    
-    checkTexts.shift();
-
-    if(!checkTexts.length) createText();
-
-  }else {
-    mistake++;
-  }
-  
-  if(char_num == textLists[k].length){
-      char_num=0;
-      k++;
-      n++;
-      if (n == textLists.length) {
-        finish();
-      }else {
-        createText();
-      }
-  }
-}
-
-document.onkeypress = KeyEvent;
-self.focus();
+   var key_num = evt.charCode;
+   var keyStr = String.fromCharCode(key_num);
+   
+   console.log(keyStr);
+   // console.log(checkTexts[0].textContent);
+   console.log(checkTexts[0].textContent);
+ 
+   if(keyStr === checkTexts[0].textContent) {
+     checkTexts[0].className = 'add-blue';
+     char_num++;
+     correct++;
+     charInsort();
+ 
+    
+     checkTexts.shift();
+ 
+     if(!checkTexts.length) createText();
+ 
+   }else {
+     mistake++;
+   }
+ 
+   if(char_num == textLists[k].length){
+     char_num=0;
+     k++;
+     n++;
+     if (n == textLists.length) {
+       finish();
+     }else {
+       createText();
+     }
+   }
+ }
+ document.onkeypress = KeyEvent;
+ self.focus();
