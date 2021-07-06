@@ -3,4 +3,7 @@
     RewriteBase /
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTPS} on
+    RewriteCond %{HTTP_HOST} ^www.example.com$
+    RewriteRule ^(.*)$ https://example.com/$1 [R=301,L]
 </IfModule>
