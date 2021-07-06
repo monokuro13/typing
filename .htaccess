@@ -1,9 +1,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-    RewriteCond %{HTTP:X-Forwarded-Proto} !https
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*$) https://korean-culture.net/$1 [R=301,L]
     RewriteCond %{HTTPS} on
-    RewriteCond %{HTTP_HOST} ^www.example.com$
-    RewriteRule ^(.*)$ https://example.com/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www.korean-culture.net$
+    RewriteRule ^(.*)$ https://korean-culture.net/$1 [R=301,L]
 </IfModule>
