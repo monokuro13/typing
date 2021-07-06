@@ -1,7 +1,3 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteCond %{ HTTPS} off
-    RewriteRule ^(.*)$ https://%{ HTTP_HOST}%{REQUEST_URI} [R=301,L]
-    RewriteCond %{HTTP_HOST} ^korean-culture\.net$
-    RewriteRule ^(.*)$ https://www.korean-culture.net/$1 [R=301,L]
+    
 </IfModule>
