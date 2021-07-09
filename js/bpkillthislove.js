@@ -299,6 +299,7 @@ function KeyEvent(evt){
 
   }else {
     mistake++;
+    checkTexts[0].className = 'add-red';
   }
 
   if(char_num == textLists[k].length){
