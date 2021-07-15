@@ -57,63 +57,6 @@ var textLists = [
   "ㅅㅏㄹㅏㅈㅕㄷㅗ ㅁㅗㄹㅡㄹ ㅅㅏㄹㅏㅁ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
   "ㄴㅏㄹ ㅂㅜㄹㅡㄴㅡㄴ ㄴㅔ ㅁㅗㄱㅅㅗㄹㅣㅇㅔ",
   " ",
-  // "ㄱㅡㄹㅓㄴ ㄴㅏㄹㅇㅣ ㅇㅣㅆㅇㅓ",
-  // "ㄱㅏㅂㅈㅏㄱㅣ ㅎㅗㄴㅈㅏㅇㅣㄴ ㄱㅓㅅㅁㅏㄴ ㄱㅏㅌㅇㅡㄴ ㄴㅏㄹ",
-  // "ㅇㅓㄷㅣㄹ ㄱㅏㄷㅗ ㄴㅐ ㅈㅏㄹㅣㄱㅏ ㅇㅏㄴㅣㄴ ㄱㅓㅅㅁㅏㄴ ㄱㅏㅌㄱㅗ",
-  // "ㄱㅗㄱㅐㄴ ㄸㅓㄹㄱㅜㅓㅈㅣㄴㅡㄴ ㄴㅏㄹ",
-  // "ㄱㅡㄹㅓㄹ ㄸㅐㅁㅏㄷㅏ ㄴㅐㄱㅔ",
-  // "ㅇㅓㄹㅁㅏㄴㅏ ㄴㅐㄱㅏ ㅅㅗㅈㅜㅇㅎㅏㄴㅈㅣ",
-  // "ㅁㅏㄹㅎㅐㅈㅜㄴㅡㄴ ㄴㅓㅇㅡㅣ ㄱㅡ ㅎㅏㄴㅁㅏㄷㅣㅇㅔ",
-  // "Everything's alright",
-  // "ㅊㅗㄹㅏㅎㅏㄴ Nobodyㅇㅔㅅㅓ ㄷㅏㅅㅣ Somebody",
-  // "ㅌㅡㄱㅂㅕㄹㅎㅏㄴ ㄴㅏㄹㅗ ㅂㅕㄴㅎㅐ",
-  // "You make me feel special",
-  // "ㅅㅔㅅㅏㅇㅇㅣ ㅇㅏㅁㅜㄹㅣ ㄴㅏㄹ ㅈㅜㅈㅓㅇㅏㄴㅈㅎㅕㄷㅗ",
-  // "ㅇㅏㅍㅡㄱㅗ ㅇㅏㅍㅡㄴ ㅁㅏㄹㄷㅡㄹㅇㅣ ㄴㅏㄹ ㅉㅣㄹㄹㅓㄷㅗ",
-  // "ㄴㅔㄱㅏ ㅇㅣㅆㅇㅓ ㄴㅏㄴ ㄷㅏㅅㅣ ㅇㅜㅅㅇㅓ",
-  // "That's what you do",
-  // "Again I feel special",
-  // "ㅇㅏㅁㅜㄱㅓㅅㄷㅗ ㅇㅏㄴㅣㄴ ㅈㅗㄴㅈㅐ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
-  // "ㅅㅏㄹㅏㅈㅕㄷㅗ ㅁㅗㄹㅡㄹ ㅅㅏㄹㅏㅁ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
-  // "ㄴㅏㄹ ㅂㅜㄹㅡㄴㅡㄴ ㄴㅔ ㅁㅗㄱㅅㅗㄹㅣㅇㅔ",
-  // "I feel loved I feel so special",
-  // "ㅈㅏㄲㅜ ㅅㅜㅁㄱㅗㅁㅏㄴ ㅅㅣㅍㅇㅓㅅㅓ",
-  // "ㅁㅏㅈㅜ ㅎㅏㄱㅣㄱㅏ ㅅㅣㄹㅎㅇㅓㅅㅓ",
-  // "ㅁㅗㄷㅡㄴ ㄱㅔ ㅇㅡㅣㅁㅣㄹㅡㄹ ㅇㅣㄹㅎㅇㅡㄴ ㄷㅡㅅㅇㅣ",
-  // "ㄴㅐㄱㅏ ㅇㅡㅣㅁㅣㄹㅡㄹ ㅇㅣㄹㅎㅇㅡㄴ ㄷㅡㅅㅇㅣ",
-  // "ㄱㅏㅁㅏㄴㅎㅣ ㅈㅜㅈㅓㅇㅏㄴㅈㅇㅏ ㅇㅣㅆㅇㅡㄹ ㄸㅐ",
-  // "ㄱㅡㄸㅐ ㄴㅐ ㅇㅏㅍㅇㅔ ㄴㅏㅌㅏㄴㅏㄴ ㄴㅓㅇㅡㅣ",
-  // "ㄸㅏㄸㅡㅅㅎㅏㄴ ㅁㅣㅅㅗㅇㅗㅏ ㅅㅗㄴㄱㅣㄹㅇㅔ",
-  // "Everything's alright",
-  // "ㅊㅗㄹㅏㅎㅏㄴ Nobodyㅇㅔㅅㅓ ㄷㅏㅅㅣ Somebody",
-  // "ㅌㅡㄱㅂㅕㄹㅎㅏㄴ ㄴㅏㄹㅗ ㅂㅕㄴㅎㅐ",
-  // "You make me feel special",
-  // "ㅅㅔㅅㅏㅇㅇㅣ ㅇㅏㅁㅜㄹㅣ ㄴㅏㄹ ㅈㅜㅈㅓㅇㅏㄴㅈㅎㅕㄷㅗ",
-  // "ㅇㅏㅍㅡㄱㅗ ㅇㅏㅍㅡㄴ ㅁㅏㄹㄷㅡㄹㅇㅣ ㄴㅏㄹ ㅉㅣㄹㄹㅓㄷㅗ",
-  // "ㄴㅔㄱㅏ ㅇㅣㅆㅇㅓ ㄴㅏㄴ ㄷㅏㅅㅣ ㅇㅜㅅㅇㅓ",
-  // "That's what you do",
-  // "Again I feel special",
-  // "ㅇㅏㅁㅜㄱㅓㅅㄷㅗ ㅇㅏㄴㅣㄴ ㅈㅗㄴㅈㅐ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
-  // "ㅅㅏㄹㅏㅈㅕㄷㅗ ㅁㅗㄹㅡㄹ ㅅㅏㄹㅏㅁ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
-  // "ㄴㅏㄹ ㅂㅜㄹㅡㄴㅡㄴ ㄴㅔ ㅁㅗㄱㅅㅗㄹㅣㅇㅔ",
-  // "I feel loved I feel so special",
-  // "You make everything alright",
-  // "ㄱㅜㄹㅡㅁㅇㅣ ㅉㅗㅏㄱ ㄲㅣㄴ ㅎㅐㅅㅅㅏㄹ ㅎㅏㄴ ㅈㅜㅁ ㅇㅓㅂㅅㄴㅡㄴ ㄴㅏㄹ",
-  // "ㄴㅔㄱㅏ ㅂㅏㄹㅗ ㄴㅏㅇㅡㅣ Shining light",
-  // "That's what you do",
-  // "ㅇㅏㅁㅜㄹㅣ ㅇㅓㄷㅜㅇㅜㄴ ㅂㅏㅁㄷㅗ ㄷㅏㅅㅣ ㄴㅏㅈ",
-  // "I owe it to you",
-  // "Because you make me feel",
-  // "You make me feel special",
-  // "ㅅㅔㅅㅏㅇㅇㅣ ㅇㅏㅁㅜㄹㅣ ㄴㅏㄹ ㅈㅜㅈㅓㅇㅏㄴㅈㅎㅕㄷㅗ",
-  // "ㅇㅏㅍㅡㄱㅗ ㅇㅏㅍㅡㄴ ㅁㅏㄹㄷㅡㄹㅇㅣ ㄴㅏㄹ ㅉㅣㄹㄹㅓㄷㅗ",
-  // "ㄴㅔㄱㅏ ㅇㅣㅆㅇㅓ ㄴㅏㄴ ㄷㅏㅅㅣ ㅇㅜㅅㅇㅓ",
-  // "That's what you do",
-  // "Again I feel special",
-  // "ㅇㅏㅁㅜㄱㅓㅅㄷㅗ ㅇㅏㄴㅣㄴ ㅈㅗㄴㅈㅐ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
-  // "ㅅㅏㄹㅏㅈㅕㄷㅗ ㅁㅗㄹㅡㄹ ㅅㅏㄹㅏㅁ ㄱㅏㅌㄷㅏㄱㅏㄷㅗ",
-  // "ㄴㅏㄹ ㅂㅜㄹㅡㄴㅡㄴ ㄴㅔ ㅁㅗㄱㅅㅗㄹㅣㅇㅔ",
-  // "I feel loved I feel so special",
 ]
 
 var t = document.getElementById('korean');
@@ -263,7 +206,6 @@ var koreanTexts = [
  
  function charInsort(){
    word_char = textLists[k].charAt(char_num);
-   // console.log(word_char);
  }
  
  
@@ -289,7 +231,6 @@ var koreanTexts = [
    var keyStr = String.fromCharCode(key_num);
    
    console.log(keyStr);
-   // console.log(checkTexts[0].textContent);
    console.log(checkTexts[0].textContent);
  
    if(keyStr === checkTexts[0].textContent) {

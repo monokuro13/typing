@@ -74,80 +74,6 @@ var textLists = [
   "ㅎㅐ",
   "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ",
   "ㅎㅐ",
-  // "All I wanna be is ㅁㅓㅅㅈㅣㅁ",
-  // "ㄴㅐ ㅁㅏㅇㅡㅁㄷㅐㄹㅗ ㄱㅗㄹㄹㅏ kick it",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ ㄷㅏ HIP ㅎㅐ",
-  // "Do it do it like me do it",
-  // "ㄴㅏㄹㅡㄹ ㄸㅏㄹㅏ ㅎㅐ kick it",
-  // "Clapping clapping ㅁㅗㄷㅜ ㄱㅏㅌㅇㅣ HIP",
-  // "I love you ㄴㅔㄱㅏ ㅁㅜㅓㄹㅏㄷㅡㄴ ㄱㅏㄴㅇㅔ",
-  // "Respect you ㄴㅔㄱㅏ ㅁㅜㅓㄹ ㅎㅏㄷㅡㄴ ㄱㅏㄴㅇㅔ",
-  // "ㄴㅡㄹ ㄸㅏㄲㅡㄴㄸㅏㄲㅡㄴㅎㅐ ㄱㅡ ㄱㅗㅏㄴㅅㅣㅁㅇㅣ ㄸㅏㄲㅡㅁㄸㅏㄲㅡㅁㅎㅐ",
-  // "ㄸㅗ ㅎㅣㄹㄲㅡㅁ ㅎㅣㄹㄲㅡㅁ ㅎㅣㄹㄲㅡㅁ",
-  // "ㅇㅣㅈㅔㄴ ㅁㅗㄷㅡㄴ ㅇㅣㄹㅇㅣ ㄱㅏㅃㅜㄴㅎㅐ veteran",
-  // "ㅅㅓㅇㄱㅗㅇㅇㅡㄹ ㅆㅓㄹㅇㅓ ㅁㅓㄱㅇㅓ ㅁㅏㅊㅣ michelin",
-  // "ㄴㅜㄱㅜㅂㅗㄷㅏ ㅃㅏㄹㅡㄴ ㄱㅓㄹㅇㅡㅁㅇㅡㄹ ㄱㅓㄹㅇㅓㅆㄴㅔ ㅂㅣㅅㅣㅈㅡㄴ",
-  // "ㅇㅣㅈㅇㅡㄴ ㅈㅣㄷㅗ ㅇㅗㄹㅐㅇㅑ ㄷㅜㅣㅅㄱㅓㄹㅇㅡㅁ",
-  // "All I wanna be is ㅁㅓㅅㅈㅣㅁ",
-  // "ㄴㅐ ㅁㅏㅇㅡㅁㄷㅐㄹㅗ ㄱㅗㄹㄹㅏ kick it",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ ㄷㅏ HIP ㅎㅐ",
-  // "ㅃㅣㅃㅣㅃㅣ ㄴㅗㄴㄹㅏㄴㅇㅣ ㄷㅗㅐ fashion",
-  // "ㅂㅕㄹㄹㅗ ㅅㅣㄴㄱㅕㅇ ㅇㅏㄴ ㅆㅓ ㄱㅡㅈㅓ action",
-  // "ㅈㅏㄲㅜ click me click me",
-  // "ㅎㅗㄹㄹㅣㄴ ㄷㅡㅅㅇㅣ zoom",
-  // "Close up close up close up",
-  // "HIP ㅎㅐ HIP HIP",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
-  // "HIP HIP HIP HIP HIP HIP ㅎㅐ HIP HIP",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
-  // "HIP HIP HIP HIP ㅎㅐ HIP",
-  // "(Attention) ㅇㅓㄷㅣㄹ ㄱㅏㄷㅡㄴ ㄴㅓㄴ",
-  // "(Reflection) ㅂㅣㅊㄴㅏㄹ ㅅㅜ ㅇㅣㅆㅇㅓ",
-  // "ㅅㅔㅅㅏㅇㅇㅔ ㄴㅓㄴ ㅎㅏㄴㅏㅃㅜㄴㅇㅣㄴ ㄱㅓㄹ",
-  // "ㄱㅡㄴㄷㅔ ㅇㅗㅐㅇㅣㄹㅐ ㄴㅔ ㅇㅓㄹㄱㅜㄹㅇㅔ ㅊㅣㅁ ㅂㅐㅌㄴㅣ (ㅋㅏㄱㅌㅜ)",
-  // "ㄴㅏㄹ ㅈㅏㄱㅡㄱㅎㅏㄴ ㅇㅕㄹㅓㅂㅜㄴ ㄱㅏㅁㅅㅏ",
-  // "ㄱㅓㄱㅣㅅㅓ ㅁㅓㅁㅊㅜㄴ ㅉㅣㅈㅣㄹㅇㅣ ㅂㅏㄴㅅㅏ",
-  // "ㄷㅓㄱㅂㅜㄴㅇㅔ ㄴㅏㅇㅡㅣ ㅁㅔㄴㅌㅏㄹㅇㅡㄴ ㄷㅏㄴㄷㅏㄴㅎㅐ",
-  // "ㄴㅏㄴ ㄷㅏㅇㅡㅁ ㅇㅐㄹㅂㅓㅁ ㅁㅏㄴㄷㅡㄹㄹㅓ ㄱㅏㄹㄱㅔ",
-  // "All you wanna be is trendy",
-  // "ㅇㅓㄱㅡㄹㅗ ㄲㅡㄹㄱㅣ gimmick ㄸㅐㅉㅣ",
-  // "ㄱㅡㄹㅓㄴ ㅇㅐㄷㅡㄹ ㄲㅣㄹㅣㄲㅣㄹㅣ HIP",
-  // "ㅃㅣㅃㅣㅃㅣ ㄴㅗㄴㄹㅏㄴㅇㅣ ㄷㅗㅐ fashion",
-  // "ㅂㅕㄹㄹㅗ ㅅㅣㄴㄱㅕㅇ ㅇㅏㄴ ㅆㅓ ㄱㅡㅈㅓ action",
-  // "ㅈㅏㄲㅜ click me click me",
-  // "ㅎㅗㄹㄹㅣㄴ ㄷㅡㅅㅇㅣ zoom",
-  // "Close up close up close up",
-  // "HIP ㅎㅐ HIP HIP",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
-  // "HIP HIP HIP HIP HIP HIP ㅎㅐ HIP HIP",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
-  // "HIP HIP HIP HIP ㅎㅐ HIP",
-  // "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
-  // "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅇㅣㅂ",
-  // "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
-  // "ㄴㅏㄴ ㅅㅏㅇㄱㅗㅏㄴㅇㅓㅂㅅㅈㅣ",
-  // "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
-  // "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅇㅣㅂ",
-  // "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
-  // "ㄴㅐㄱㅏ ㅎㅏㅁㅕㄴ HIP",
-  // "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
-  // "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅍㅐㄴㅌㅣ",
-  // "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
-  // "ㄴㅏㄴ ㅅㅏㅇㄱㅗㅏㄴㅇㅓㅂㅅㅈㅣ",
-  // "ㅋㅗ ㅁㅜㄷㅇㅡㄴ ㅌㅣ",
-  // "ㅃㅣㅈㅕㄴㅏㅇㅗㄴ ㅍㅐㄴㅌㅣ",
-  // "ㄸㅓㄱㅈㅣㄴ ㅁㅓㄹㅣ",
-  // "ㄴㅐㄱㅏ ㅎㅏㅁㅕㄴ HIP",
-  // "ㅃㅣㅃㅣㅃㅣ ㄴㅗㄴㄹㅏㄴㅇㅣ ㄷㅗㅐ fashion",
-  // "ㅂㅕㄹㄹㅗ ㅅㅣㄴㄱㅕㅇ ㅇㅏㄴ ㅆㅓ ㄱㅡㅈㅓ action",
-  // "ㅈㅏㄲㅜ click me click me",
-  // "ㅎㅗㄹㄹㅣㄴ ㄷㅡㅅㅇㅣ zoom",
-  // "Close up close up close up",
-  // "HIP ㅎㅐ HIP HIP",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
-  // "HIP HIP HIP HIP HIP HIP ㅎㅐ HIP HIP",
-  // "ㅁㅓㄹㅣ ㅇㅓㄲㅐ ㅁㅜㄹㅡㅍ HIP",
-  // "HIP HIP HIP HIP ㅎㅐ HIP",
 ]
 
 var t = document.getElementById('korean');
@@ -314,7 +240,6 @@ var koreanTexts = [
  
  function charInsort(){
    word_char = textLists[k].charAt(char_num);
-   // console.log(word_char);
  }
  
  
@@ -340,7 +265,6 @@ var koreanTexts = [
    var keyStr = String.fromCharCode(key_num);
    
    console.log(keyStr);
-   // console.log(checkTexts[0].textContent);
    console.log(checkTexts[0].textContent);
  
    if(keyStr === checkTexts[0].textContent) {

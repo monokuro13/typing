@@ -55,61 +55,6 @@ var textLists = [
   " ",
   " ",
   " "
-  // "ㅊㅓㄴㅅㅏ ㄱㅏㅌㅇㅡㄴ Hi ㄲㅡㅌㅇㅔㄴ ㅇㅏㄱㅁㅏ ㄱㅏㅌㅇㅡㄴ Bye",
-  // "ㅁㅐㅂㅓㄴ ㅁㅣㅊㅣㄹㄷㅡㅅㅎㅏㄴ High ㄷㅜㅣㅇㅔㄴ ㅂㅐㅌㅇㅓㅇㅑㅎㅏㄴㅡㄴ Price",
-  // "ㅇㅣㄱㅓㄴ ㄷㅏㅂㅇㅣ ㅇㅓㅂㅅㄴㅡㄴ Test ㅁㅐㅂㅓㄴ ㅅㅗㄱㄷㅓㄹㅏㄷㅗ Yes",
-  // "ㄸㅏㄱㅎㅏㄴ ㄱㅏㅁㅈㅓㅇㅇㅡㅣ ㄴㅗㅇㅖ",
-  // "ㅇㅓㄹㅇㅓ ㅈㅜㄱㅇㅡㄹ ㅅㅏㄹㅏㅇㅎㅐ",
-  // "Here I come kick in the door",
-  // "ㄱㅏㅈㅏㅇ ㄷㅗㄱㅎㅏㄴ ㄱㅓㄹㄹㅗ ㅈㅜㅓ",
-  // "ㅃㅓㄴㅎㅏㄷㅣ ㅃㅓㄴㅎㅏㄴ ㄱㅡ love",
-  // "ㄷㅓ ㄴㅐㄴㅗㅏㅂㅗㅏ give me some more",
-  // "ㅇㅏㄹㅇㅏㅅㅓ ㅁㅐㄷㅏㄹㄹㅕ ㅂㅕㄹㅏㅇ ㄲㅡㅌㅇㅔ",
-  // "ㅎㅏㄴㅁㅏㄷㅣㅁㅕㄴ ㄸㅗ like ㅎㅔㅂㅓㄹㄹㅔ ㅎㅐ",
-  // "ㄱㅡ ㄸㅏㄸㅡㅅㅎㅏㄴ ㄸㅓㄹㄹㅣㅁㅇㅣ ㅅㅐㅃㅏㄹㄱㅏㄴ ㅅㅓㄹㄹㅔㅁㅇㅣ",
-  // "ㅁㅏㅊㅣ heaven ㄱㅏㅌㄱㅔㅆㅈㅣㅁㅏㄴ",
-  // "you might not get in it",
-  // "Look at me Look at you",
-  // "ㄴㅜㄱㅏ ㄷㅓ ㅇㅏㅍㅡㄹㄲㅏ?",
-  // "You smart ㄴㅜㄱㅏ? You are",
-  // "ㄷㅜ ㄴㅜㄴㅇㅔ ㅍㅣㄴㅜㄴㅁㅜㄹ ㅎㅡㄹㅡㄱㅔ ㄷㅗㅣㄴㄷㅏㅁㅕㄴ",
-  // "So sorry ㄴㅜㄱㅏ? You are",
-  // "ㄴㅏ ㅇㅓㄸㅓㄱㅎㅐ ㄴㅏㅇㅑㄱㅎㅏㄴ ㄴㅏㄹ ㄱㅕㄴㄷㅣㄹ ㅅㅜ ㅇㅓㅂㅅㅇㅓ",
-  // "ㅇㅐㅆㅓ ㄷㅜ ㄴㅜㄴㅇㅡㄹ ㄱㅏㄹㅣㄴ ㅊㅐ",
-  // "ㅅㅏㄹㅏㅇㅇㅡㅣ ㅅㅜㅁㅌㅗㅇㅇㅡㄹ ㄲㅡㄴㅎㅇㅓㅇㅑㄱㅔㅆㅇㅓ",
-  // "LET'S KILL THIS LOVE",
-  // "LET'S KILL THIS LOVE",
-  // "Feelin' like a sinner",
-  // "Its so fire with him I go boo hoo",
-  // "He said you look crazy",
-  // "Thank you baby",
-  // "I owe it all to you",
-  // "Got me all messed up",
-  // "His love is my favorite",
-  // "But you plus me sadly can be dangerous",
-  // "Lucky me Lucky you",
-  // "ㄱㅕㄹㄱㅜㄱㅇㅔㄴ ㄱㅓㅈㅣㅅㅁㅏㄹ we lie",
-  // "So what so what",
-  // "ㅁㅏㄴㅇㅑㄱㅇㅔ ㄴㅐㄱㅏ ㄴㅓㄹ ㅈㅣㅇㅜㄱㅔ",
-  // "ㄷㅗㅣㄴㄷㅏㅁㅕㄴ So sorry",
-  // "I'm not sorry",
-  // "ㄴㅏ ㅇㅓㄸㅓㄱㅎㅐ ㄴㅏㅇㅑㄱㅎㅏㄴ ㄴㅏㄹ ㄱㅕㄴㄷㅣㄹ ㅅㅜ ㅇㅓㅂㅅ어",
-  // "ㅇㅐㅆㅓ ㄴㅜㄴㅁㅜㄹㅇㅡㄹ ㄱㅏㅁㅊㅜㄴ ㅊㅐ",
-  // "ㅅㅏㄹㅏㅇㅇㅡㅣ ㅅㅜㅁㅌㅗㅇㅇㅡㄹ ㄲㅡㄴㅎㅇㅓㅇㅑㄱㅔㅆㅇㅓ",
-  // "LET'S KILL THIS LOVE",
-  // "LET'S KILL THIS LOVE",
-  // "We all commit to love",
-  // "That makes you cry",
-  // "We're all making love",
-  // "That kills you inside",
-  // "We must kill this love",
-  // "Yeah it's sad but true",
-  // "Gotta kill this love",
-  // "Before it kills you too",
-  // "Kill this love",
-  // "Yeah it's sad but true",
-  // "Gotta kill this love",
-  // "Gotta kill let's kill this love"
 ]
 
 var t = document.getElementById('korean');
@@ -257,7 +202,6 @@ charInsort();
 
 function charInsort(){
   word_char = textLists[k].charAt(char_num);
-  // console.log(word_char);
 }
 
 
@@ -283,7 +227,6 @@ function KeyEvent(evt){
   var keyStr = String.fromCharCode(key_num);
   
   console.log(keyStr);
-  // console.log(checkTexts[0].textContent);
   console.log(checkTexts[0].textContent);
 
   if(keyStr === checkTexts[0].textContent) {
