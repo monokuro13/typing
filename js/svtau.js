@@ -279,7 +279,7 @@ var koreanTexts = [
      checkTexts.shift();
  
      if(!checkTexts.length) createText();
- 
+     event.preventDefault();
    }else {
      mistake++;
      checkTexts[0].className = 'add-red';

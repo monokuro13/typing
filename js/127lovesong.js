@@ -253,15 +253,15 @@ function KeyEvent(evt){
     char_num++;
     correct++;
     charInsort();
-
    
     checkTexts.shift();
 
     if(!checkTexts.length) createText();
-
+    event.preventDefault();
   }else {
     mistake++;
     checkTexts[0].className = 'add-red';
+    
   }
 
   if(char_num == textLists[k].length){
